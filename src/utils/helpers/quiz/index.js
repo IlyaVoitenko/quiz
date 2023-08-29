@@ -33,7 +33,7 @@ export const quiz = [
   },
 ];
 
-export const handleAnswer = (target, item) => {
+export const handleSetAnswer = (target, item) => {
   const selected = item.variants.filter((item) => item.text === target.value);
   item.answer = selected[0];
   console.log(item);

@@ -1,5 +1,6 @@
 import React from "react";
-import { handleAnswer } from "../../../utils/helpers/quiz";
+import style from "./VariantsQuiz.module.css";
+import { handleSetAnswer } from "../../../utils/helpers/quiz";
 
 const VariantsQuiz = ({ item, nameGroup }) => {
   return (
@@ -12,7 +13,7 @@ const VariantsQuiz = ({ item, nameGroup }) => {
               id={variant.idVariant}
               name={nameGroup}
               value={variant.text}
-              onChange={({ target }) => handleAnswer(target, item)}
+              onChange={({ target }) => handleSetAnswer(target, item)}
             />
             <label htmlFor={variant.idVariant}>{variant.text}</label>
           </div>

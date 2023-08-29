@@ -1,5 +1,5 @@
 import React from "react";
-import QuizItem from "../QuizItem";
+import QuizItem from "../QuizItem/QuizItem";
 import { quiz } from "../../utils/helpers/quiz";
 
 const QuizList = () => {
