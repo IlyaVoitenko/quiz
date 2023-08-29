@@ -1,19 +1,20 @@
 import React from "react";
+import { handleAnswer } from "../../../utils/helpers/quiz";
 
-const VariantsQuiz = ({ variants, nameGroup }) => {
+const VariantsQuiz = ({ item, nameGroup }) => {
   return (
     <>
-      {variants.map((variant, index) => {
+      {item.variants.map((variant, index) => {
         return (
           <div key={index}>
             <input
               type="radio"
-              id={index}
+              id={variant.idVariant}
               name={nameGroup}
               value={variant.text}
-              onChange={() => {}}
+              onChange={({ target }) => handleAnswer(target, item)}
             />
-            <label htmlFor={index}>{variant.text}</label>
+            <label htmlFor={variant.idVariant}>{variant.text}</label>
           </div>
         );
       })}

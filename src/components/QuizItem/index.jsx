@@ -5,7 +5,7 @@ const QuizItem = ({ item }) => {
   return (
     <article key={item.id}>
       <span>{item.question}</span>
-      <VariantsQuiz variants={item.variants} nameGroup={item.nameGroup} />
+      <VariantsQuiz item={item} nameGroup={item.nameGroup} />
     </article>
   );
 };
